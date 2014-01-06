@@ -70,9 +70,22 @@
 }
 #cool-header-inner{
     max-width:960px;
+    margin:0 auto;
+    overflow: hidden;
+    padding:0;
 }
 #logo-title{
     width: auto;
+    overflow: hidden;
+    padding:0;
+}
+
+#logo-parent-to-achieve-right-varticle-line{
+    overflow: hidden;
+    padding: 12px 14px 12px 0;
+    margin: 0 14px 0 0;
+    background: url("@{base-url}/images/pop-title-bg.png") no-repeat top right;
+    max-width: 216px;
 }
 
 // End typography defaults
@@ -86,16 +99,23 @@
 #main-content { margin: 0 auto; }
 
 // Logo helper
-#pop-logo { margin: 20px auto; }
+#pop-logo {}
 
 // Pop title
 #pop-title {
-  max-width: 960px;
+  width: 716px;
+  display: block;
+  position: relative;
+  float: left;
   padding: 0 20px;
   margin: 50px auto;
-
   .pop-title-text();
-  text-align: center;
+  //text-align: center;
+  .link-button{
+    display: block;
+    float: right;
+    margin-left:5px;
+  }
 }
 
 .columnizer-col {
