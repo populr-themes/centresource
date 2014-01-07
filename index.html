@@ -9,6 +9,7 @@
   <!--
     Dummy content parameters
   -->
+  
   <!-- dummyImageCategory: specify search term for images to pull from 500px -->
   <meta itemprop="dummyImageCategory" content="All">
   <!-- dummyContentLength: specify how much dummy text appears within each asset -->
@@ -43,7 +44,9 @@
   <script src="http://populr.me/assets/developers/themer.js"></script>
 
   <!-- Add any javscript your theme requires here -->
-  <script src="/js/main.js"></script>
+  <script type="text/javascript" src="tweetie.min.js"></script>
+  <script src="js/main.js"></script>
+  
 
 </head>
 <body>
@@ -52,20 +55,19 @@
   <script id="theme" type="text/x-handlebars-template">
 
 <div id="cool-header">
+    <div id="horizontal-line"></div>
     <div id="cool-header-inner">
         <div id="logo-title">
             {{{title}}}
             <div id="logo-parent-to-achieve-right-varticle-line">
                 {{logo max_width=216 max_height=100}}
             </div>
-            
         </div>
     </div>
 </div>
 
 <div id="pop-parent-for-bg">
     {{#region "columnizer" id="main-region" max_cols="3" max_auto_assets="0" dummy_content="T-1|T-1,T-1|T-1,T-1,T-1|I-1|I-2|I-1,I-2|I-1,I-2,I-3|V-1|V-2|V-1,V-2|V-1,V-2,V-3|D-1|D-3|D-1,D-3|D-1,D-2,D-3|E-1|E-2|E-1,E-2|E-1,E-2,E-3"}}
-
       {{#asset "text" size="1"}}
         {{{title}}}
         {{{body}}}
@@ -162,10 +164,10 @@
       {{/asset}}
 
     {{/region}}
-
-    {{sharing}}
-
-    {{pop_links}}
+    <div id="cool-footer">
+        <div class="tweet"></div>
+        {{sharing}}
+    </div>
 </div>
   </script>
 </body>
