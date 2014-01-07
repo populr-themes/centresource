@@ -84,7 +84,15 @@
       {{/asset}}
 
       {{#asset "imagegroup" size="1"}}
-        {{{imageslider images width="506" height="337" crop_single = true}}}
+         <div class="my-lightbox-parent">
+              {{#if lightbox_enabled}}
+                  <div class="my-center">
+                        <span><i class="icon icon-plus"/></span>
+                  </div>
+              {{/if}}
+              {{{imageslider images width="506" height="337" crop_single = true}}}
+         </div>
+        
         <div class="floated-parent-for-imagegroup-embedgroup-texts">
             {{{title}}}
             {{{description}}}
@@ -92,13 +100,28 @@
       {{/asset}}
  
       {{#asset "imagegroup" size="2"}}
-        {{{imageslider images width="442" height="226" crop_single = true}}}
+        <div class="my-lightbox-parent">
+              {{#if lightbox_enabled}}
+                  <div class="my-center">
+                        <span><i class="icon icon-plus"/></span>
+                  </div>
+              {{/if}}
+              {{{imageslider images width="442" height="226" crop_single = true}}}
+         </div>
+        
         {{{title}}}
         {{{description}}}
       {{/asset}}
   
       {{#asset "imagegroup" size="3"}}
-        {{{imageslider images width="275" height="226" crop_single = true}}}
+        <div class="my-lightbox-parent">
+              {{#if lightbox_enabled}}
+                  <div class="my-center">
+                        <span><i class="icon icon-plus"/></span>
+                  </div>
+              {{/if}}
+              {{{imageslider images width="275" height="226" crop_single = true}}}
+         </div>
         {{{title}}}
         {{{description}}}
       {{/asset}}

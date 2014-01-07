@@ -27,6 +27,7 @@
 @link-color: @custom-color;
 @pop-bg-color:#ECECEC;
 @orange:#da6b11;
+@dark-grey:#333333;
 
 // Title text defaults
 // @headline-font-family is defined in variables.less
@@ -63,11 +64,12 @@
 }
 #pop-parent-for-bg{
     background:@pop-bg-color  url("@{base-url}/images/background-image.png");
+    padding-bottom:85px;
 }
 #cool-header{
     background:@pop-bg-color  url("@{base-url}/images/pop-title-bg.png");
     border-top: 4px solid @orange;
-    position: fixed;
+    position: relative;
     overflow: hidden;
     width:100%;
     z-index:1000;
@@ -85,15 +87,15 @@
     padding:0;
 }
 #cool-footer{
-    max-width:960px;
-    background-color:#333333;
-    margin: 0 auto;
-    padding:10px;
-    border-radius:4px;
+    max-width:904px;
+    background-color:@dark-grey;
+    margin: 40px auto 0;
+    padding:15px 20px;
+    border-radius:5px;
 }
 
 #horizontal-line{
-    height:1px;
+    height:2px;
     width:100%;
     margin:0;
     padding:0;
@@ -171,28 +173,28 @@
 //text styling of all assets according to asset size
 .asset-size-1{
     .asset-title{
-        .headline-text(36px;1.2);
+        .headline-text(54px;1.2);
     }
     .description, .body, .description li, .body li {
-        .body-text(17px;1.2);
+        .body-text(18px;1.2);
     }  
 }
 
 .asset-size-2{
     .asset-title{
-        .headline-text(36px;1.2);
+        .headline-text(26px;1.2);
     }  
     .description, .body, .description li, .body li {
-        .body-text(17px;1.2);
+        .body-text(18px;1.2);
     }
 }
 
 .asset-size-3{
     .asset-title{
-        .headline-text(36px;1.2);
+        .headline-text(24px;1.2);
     }
     .description, .body, .description li, .body li {
-        .body-text(17px;1.2);
+        .body-text(18px;1.2);
     }
 }
 
@@ -200,15 +202,58 @@
 
 
 // Image asset styling
+.my-lightbox-parent{
+    .populr-image-slider{
+        z-index:15;
+    }
+    overflow: hidden;
+    position: relative;
+    .my-center{
+        position:absolute;
+        display:table;
+        width:100%;
+        margin-top: -30px ;
+        padding:0;
+        top:50%;
+        left:0;
+        text-align: center;
+        z-index:10;
+        span{
+            padding:20px;
+            height:20px;
+            width:20px;
+            opacity:0;
+            display: inline-block;
+            border-radius:100%;
+            -moz-border-radius:100%;
+            -ms-border-radius:100%;
+            -o-border-radius:100%;
+            -webkit-border-radius:100%;
+            background-color:@link-color;
+            .icon{
+                position: relative;
+                top: -2px;
+                left: 1px;
+                text-align: center;
+                color: white;
+                font-size:25px;
+                font-style:normal!important;
 
+            }
+        }
+    }
+    &:hover .populr-image-slider{opacity:.5}
+    &:hover span{opacity: 1}
+}
 #populr > #image-slider-themes > .basic();
 .columnizer-row-contents-imagegroup:nth-child(odd),.columnizer-row-contents-embedgroup:nth-child(odd){
     .floated-parent-for-imagegroup-embedgroup-texts{
         width:432px;
         float: right;
     }
-    .columnizer-col1 .populr-image-slider,.columnizer-col1 .embed{
+    .columnizer-col1 .my-lightbox-parent,.columnizer-col1 .embed{
         float: left;
+        width:506px;
     }
 }
 .columnizer-row-contents-imagegroup:nth-child(even),.columnizer-row-contents-embedgroup:nth-child(even){
@@ -216,10 +261,12 @@
         width:432px;
         float: left;
     }
-    .columnizer-col1 .populr-image-slider, .columnizer-col1 .embed{
+    .columnizer-col1 .my-lightbox-parent,.columnizer-col1 .embed{
         float: right;
+        width:506px;
     }
 }
+
 
 // Document asset styling
 .documents {
