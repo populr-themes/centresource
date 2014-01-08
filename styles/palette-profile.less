@@ -10,7 +10,6 @@
     position: fixed;
     z-index:100;
     width:100%;
-    
     #profile-header-inner{
         max-width:1000px;
         margin:0 auto;
@@ -20,14 +19,14 @@
 
 #profile-background{
     display: block;
-    width:960px;
+    max-width:1000px;
     height:382px;
     margin:0 auto;
 }
 
 .description, .body, .description li, .body li {
-    font-family:@body-profile-font-family;
-    line-height:1.8;
+    font-family:@body-profile-font-family!important;
+    line-height:1.8!important;
 } 
 
 .columnizer-row-inner{
@@ -35,7 +34,7 @@
 }
 
 #pop-parent-for-bg{
-    padding-bottom:0;
+    padding-bottom:0!important;
 }
 
 #profile-footer{
