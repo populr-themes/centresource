@@ -61,12 +61,15 @@
   }
 }
 #pop-parent-for-bg{
+    position:relative;
+    overflow:hidden;
+    margin:0;
+    padding:0;
     background:@pop-bg-color  url("@{base-url}/images/background-image.png");
     padding-bottom:85px;
+    border-top:4px solid @custom-color;
 }
 #default-header{
-    background:@pop-bg-color  url("@{base-url}/images/pop-title-bg.png");
-    border-top: 4px solid @orange;
     position: relative;
     overflow: hidden;
     width:100%;
