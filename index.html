@@ -15,7 +15,6 @@
   <!-- dummyContentLength: specify how much dummy text appears within each asset -->
   <!-- Value can be set to short, medium or long -->
   <meta itemprop="dummyContentLength" content="medium">
-
   <!-- 
     Default background images
     The image's actual width & height must be set
@@ -24,18 +23,16 @@
     Average color can be computed by opening an image in Photoshop and shrinking it down to 1 pixel
   -->
   
-  <!--
-    <meta itemprop="defaultBackground" content="/images/background.jpg" data-width="1800" data-height="1800" data-position="c" data-style="fill" data-color="#665b42">
-  -->
+  
+   <meta itemprop="defaultBackground" content="/images/background-image.jpg" data-width="960" data-height="382" data-position="c" data-style="fill" data-color="#665b42">
+   <meta itemprop="backgroundContainer" content="#profile-background">
 
   <!--
-    Theme styles
+    Theme styles 
     The Custom style presents Populr's end users with a color picker that sets the @custom-color variable
   -->
-  <meta itemprop="palette" content="palette-default" title="Kayne Prime" data-preview="#da6b11">
-  <meta itemprop="palette" content="palette-Etch" title="Etch" data-preview="#bcf266">
-  <meta itemprop="palette" content="palette-Margot" title="Margot" data-preview="#f36d24">
-  <meta itemprop="palette" content="palette-City-House" title="City House" data-preview="#c8203e">
+  <meta itemprop="palette" content="palette-default" title="Default" data-preview="#da6b11">
+  <meta itemprop="palette" content="palette-profile" title="Profile" data-preview="#bcf266">
  
   <!-- Add any styles your theme requires here -->
   <link rel="stylesheet/less" type="text/css" href="styles/main.less">
@@ -54,9 +51,9 @@
        prevent issues with quote escaping and invalid markup. -->
   <script id="theme" type="text/x-handlebars-template">
 
-<div id="cool-header">
+<div id="default-header">
     <div id="horizontal-line"></div>
-    <div id="cool-header-inner">
+    <div id="default-header-inner">
         <div id="logo-title">
             {{{title}}}
             <div id="logo-parent-to-achieve-right-varticle-line">
@@ -64,6 +61,15 @@
             </div>
         </div>
     </div>
+</div>
+<div id="profile-header">
+    <div id="profile-header-inner">
+        {{logo max_width=216 max_height=100}}
+    <div id="profile-header-inner">
+</div>
+
+<div id="profile-background">
+    
 </div>
 
 <div id="pop-parent-for-bg">

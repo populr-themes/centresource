@@ -6,9 +6,7 @@
 
 // You must import variables.less before importing populr_mixins.less
 @import 'palette-custom';
-@import 'palette-city-house';
-@import 'palette-margot';
-@import 'palette-etch';
+@import 'palette-profile';
 @import 'palette-default';
 @import 'variables';
 @import 'http://populr.me/assets/developers/populr_mixins.less';
@@ -66,7 +64,7 @@
     background:@pop-bg-color  url("@{base-url}/images/background-image.png");
     padding-bottom:85px;
 }
-#cool-header{
+#default-header{
     background:@pop-bg-color  url("@{base-url}/images/pop-title-bg.png");
     border-top: 4px solid @orange;
     position: relative;
@@ -75,11 +73,14 @@
     z-index:1000;
     padding:44px 0 25px 0;
 }
-#cool-header-inner{
+#default-header-inner{
     max-width:960px;
     margin:0 auto;
     overflow: hidden;
     padding:0;
+}
+#profile-header,#profile-background{
+    display: none;
 }
 #logo-title{
     width: auto;
