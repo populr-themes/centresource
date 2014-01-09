@@ -42,24 +42,33 @@
 
 @pop-title-font-size:@palette-pop-title-font-size;
 
-
+.my-text-shadow(){
+    text-shadow: -2px 1px 1px rgba(150, 150, 150, 0.67);
+    -moz-text-shadow: -2px 1px 1px rgba(150, 150, 150, 0.67);
+    -o-text-shadow: -2px 1px 1px rgba(150, 150, 150, 0.67);
+    -ms-shadow: -2px 1px 1px rgba(150, 150, 150, 0.67);
+    -webkit-text-shadow: -2px 1px 1px rgba(150, 150, 150, 0.67);
+}
 // Title text defaults
 // @headline-font-family is defined in variables.less
 .headline-text(@font-size:24px; @line-height:@headline-line-height) {
   font-family: @headline-font-family;
   font-size: @font-size;
   line-height: @line-height;
+  
 }
 .pop-title-text() {
   font-family: @headline-font-family;
   font-size: @pop-title-font-size;
   line-height: 1.4;
+  .my-text-shadow();
 }
 
 .body-text(@font-size:@body-font-size-1) {
   font-family: @body-font-family;
   font-size: @font-size;
   line-height: @body-line-height;
+  .my-text-shadow();
 }
 
 #pop {
