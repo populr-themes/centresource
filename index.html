@@ -52,9 +52,9 @@
 <script id="theme" type="text/x-handlebars-template">
 <div id="pop-parent-for-bg">
     
-    <div id="default-header">
+    <div id="header">
         <div id="horizontal-line"></div>
-        <div id="default-header-inner">
+        <div id="header-inner">
             <div id="logo-title">
                 {{{title}}}
                 <div id="logo-parent-to-achieve-right-varticle-line">
@@ -62,12 +62,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div id="profile-header">
-        <div id="profile-header-inner">
-            {{logo max_width=216 max_height=100}}
-        </div id="profile-header-inner">
     </div>
 
     <div id="profile-background">
@@ -195,12 +189,10 @@
       {{/asset}}
 
     {{/region}}
-    <div id="default-footer">
-        {{sharing}}
-    </div>
-    
-    <div id="profile-footer">
-        <div id="profile-footer-inner">
+    <div id="footer">
+        <div id="footer-inner">
+            {{sharing}}
+            {{pop-links}}
         </div>
     </div>
 </div>

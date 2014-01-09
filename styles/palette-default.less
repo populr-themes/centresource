@@ -1,16 +1,91 @@
-@color-palette:#da6b11;
-#profile-header,#profile-background{
-    display: none;
+@orange:#da6b11;
+@palette-color:@orange;
+@dark-grey:#333333;
+//Text-styling for this particular page
+//body text-styling
+@palette-body-font-family: @body-default-font-family;
+@palette-body-line-height: 1.71;
+@palette-body-font-size-1:14px;
+@palette-body-font-size-2:14px;
+@palette-body-font-size-3:14px;
+
+//headline text-styling
+//same font-family for both pages
+//sizes
+@palette-headline-font-size-1:41px;
+@palette-headline-font-size-2:24px;
+@palette-headline-font-size-3:19px;
+@palette-headline-line-height:1.4;
+//pop-title
+@palette-pop-title-font-size:23px;
+
+
+#header{
+    position: relative;
+    overflow: hidden;
+    width:100%;
+    padding:44px 0 25px 0;
+    #horizontal-line{
+        display: block;
+        position: absolute;
+        height:2px;
+        width:100%;
+        margin:0;
+        padding:0;
+        background:#b1b1b1 url("@{base-url}/images/horizontal.png");
+        bottom:0;
+    }
+    #header-inner{
+        max-width:960px;
+        margin:0 auto;
+        overflow: hidden;
+        padding:0;
+        #logo-title{
+            width: auto;
+            overflow: hidden;
+            padding:0;
+            #pop-title {
+                width: 716px;
+                display: block;
+                position: relative;
+                float: right;
+                padding: 0;
+                margin: 0;
+                .link-btn{
+                  font-size:18px;
+                  display: block!important;
+                  float: right!important;
+                  margin-left:5px;
+                  font-family:@pop-title-btn-font-family;
+                }
+            }
+            #logo-parent-to-achieve-right-varticle-line{
+                overflow: hidden;
+                padding: 12px 14px 12px 0;
+                margin: 0 14px 0 0;
+                background: url("@{base-url}/images/varticle.png") no-repeat top right;
+                background-repeat: repeat-y;
+                max-width: 216px;
+                float: left;
+            }
+
+        }
+    }
 }
-#default-header{
-    display: block;
+
+#footer{
+    width:100%;
+    margin:0;
+    padding:0;
+    #footer-inner{
+        max-width:904px;
+        background-color:@dark-grey;
+        margin: 40px auto 0;
+        padding:15px 20px;
+        border-radius:5px;
+    }
 }
-#default-footer{
-    display: block;
-}
-#profile-footer{
-    display: none;
-}
+
 .columnizer-row-inner{
     background-color: transparent;
 }

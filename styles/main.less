@@ -27,26 +27,39 @@
 @orange:#da6b11;
 @dark-grey:#333333;
 
+//Variables pulled from default.less & profile.less
+@body-font-family:@palette-body-font-family;
+@body-font-size-1:@palette-body-font-size-1;
+@body-font-size-2:@palette-body-font-size-2;
+@body-font-size-3:@palette-body-font-size-3;
+@body-line-height:@palette-body-line-height;
+
+//headeline-font-family is same for both pages, thus there is no need to pull it from different palette. 
+@headline-font-size-1:@palette-headline-font-size-1;
+@headline-font-size-3:@palette-headline-font-size-2;
+@headline-font-size-3:@palette-headline-font-size-3;
+@headline-line-height:@palette-headline-line-height;
+
+@pop-title-font-size:@palette-pop-title-font-size;
+
+
 // Title text defaults
 // @headline-font-family is defined in variables.less
-.headline-text(@font-size:24px;@line-height:1.2) {
+.headline-text(@font-size:24px; @line-height:@headline-line-height) {
   font-family: @headline-font-family;
   font-size: @font-size;
   line-height: @line-height;
 }
 .pop-title-text() {
   font-family: @headline-font-family;
-  font-size: 31px;
-  line-height: 1.1;
+  font-size: @pop-title-font-size;
+  line-height: 1.4;
 }
 
-// Body text defaults
-@body-font-family: @body-default-font-family;
-
-.body-text(@font-size:14px;@line-height:1.5) {
+.body-text(@font-size:@body-font-size-1) {
   font-family: @body-font-family;
   font-size: @font-size;
-  line-height: @line-height;
+  line-height: @body-line-height;
 }
 
 #pop {
@@ -69,52 +82,6 @@
     padding-bottom:85px;
     border-top:4px solid @custom-color;
 }
-#default-header{
-    position: relative;
-    overflow: hidden;
-    width:100%;
-    z-index:1000;
-    padding:44px 0 25px 0;
-}
-#default-header-inner{
-    max-width:960px;
-    margin:0 auto;
-    overflow: hidden;
-    padding:0;
-}
-
-#logo-title{
-    width: auto;
-    overflow: hidden;
-    padding:0;
-}
-#cool-footer{
-    max-width:904px;
-    background-color:@dark-grey;
-    margin: 40px auto 0;
-    padding:15px 20px;
-    border-radius:5px;
-}
-
-#horizontal-line{
-    height:2px;
-    width:100%;
-    margin:0;
-    padding:0;
-    background:#b1b1b1 url("@{base-url}/images/horizontal.png");
-    position:absolute;
-    bottom:0;
-}
-
-#logo-parent-to-achieve-right-varticle-line{
-    overflow: hidden;
-    padding: 12px 14px 12px 0;
-    margin: 0 14px 0 0;
-    background: url("@{base-url}/images/varticle.png") no-repeat top right;
-    background-repeat: repeat-y;
-    max-width: 216px;
-    float: left;
-}
 
 // End typography defaults
 /////////////////////////////////////////////////////////////////////////
@@ -131,21 +98,10 @@
 
 // Pop title
 #pop-title {
-  width: 716px;
-  display: block;
-  position: relative;
-  float: right;
-  padding: 0;
-  margin: ;
+  
   .pop-title-text();
   //text-align: center;
-  .link-btn{
-    font-size:18px;
-    display: block!important;
-    float: right!important;
-    margin-left:5px;
-    font-family:@pop-title-btn-font-family;
-  }
+  
 }
 
 .columnizer-col {
@@ -175,28 +131,28 @@
 //text styling of all assets according to asset size
 .asset-size-1{
     .asset-title{
-        .headline-text(54px;1.2);
+        .headline-text(@headline-font-size-1);
     }
     .description, .body, .description li, .body li {
-        .body-text(18px;1.2);
+        .body-text(@body-font-size-1);
     }  
 }
 
 .asset-size-2{
     .asset-title{
-        .headline-text(26px;1.2);
+        .headline-text(@headline-font-size-2);
     }  
     .description, .body, .description li, .body li {
-        .body-text(18px;1.2);
+        .body-text(@body-font-size-2);
     }
 }
 
 .asset-size-3{
     .asset-title{
-        .headline-text(24px;1.2);
+        .headline-text(@headline-font-size-3);
     }
     .description, .body, .description li, .body li {
-        .body-text(18px;1.2);
+        .body-text(@body-font-size-3);
     }
 }
 

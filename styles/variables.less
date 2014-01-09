@@ -5,11 +5,10 @@
 
 
 // Use this statement to import Google Web Fonts
-//@import '//fonts.googleapis.com/css?family=Open+Sans:300,700spo&.css';
+
 @import '//fonts.googleapis.com/css?family=Paytone+One';
 @import '//fonts.googleapis.com/css?family=Cabin:400,700,400italic,700italic';
-@import '//fonts.googleapis.com/css?family=Droid+Sans:400,700';//Substitute of Myriad pro
-@import '//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic';
+@import '//fonts.googleapis.com/css?family=PT+Sans+Caption:400,700';
 @import '//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic';
 
 // Use @base-url when specifying relative paths to images, fonts, 
@@ -32,19 +31,17 @@
 
 @asset-title-default-font-family:'Paytone One', Arial, Helvetica, sans-serif;
 @asset-sub-title-default-font-family:'Cabin', Arial, Helvetica, sans-serif;
-@body-default-font-family:'Droid Sans', Arial, Helvetica, sans-serif;// Its the closest font to Myriad Pro, (i got it from stackoverflow)
 @body-profile-font-family:'PT Serif', serif;
-@pop-title-btn-font-family:'PT Sans',Arial, Helvetica, sans-serif;
+@body-default-font-family:'PT Sans Caption',Arial, Helvetica, sans-serif;
+
 // @headline-font-family is changed with the Font dropdown 
 @headline-font-family: @asset-title-default-font-family;
-
-
 // @custom-color is changed with the custome color picker in the Color 
 // dropdown. The color picker will only be available to your users if 
 // you set it up as one of your color palettes. See the Populr themer 
 // documentation for details on how this works:
 // http://developers.populr.me/theming/
-@custom-color: @color-palette;
+@custom-color: @palette-color;
 
 
 /************************************************************************
@@ -72,7 +69,7 @@
 // To use your own grid, edit the following properties as needed.
 .columnizer-row-inner {
   margin: 0 auto;
-  max-width:1000px;
+  max-width:1020px;
 }
 .columnizer-col {
 	float: left;
@@ -81,8 +78,8 @@
 	.columnizer-cols1 & { width: 960px;}
 	.columnizer-cols2 & { width: 442px; margin-left:76px;}
 	.columnizer-cols3 & { width: 280px; margin-left:60px;}
-	&:first-child { margin-left: 20px; }
-	&:last-child { margin-right: 20px; }
+	&:first-child { margin-left: 30px; }
+	&:last-child { margin-right: 30px; }
 }
 
 
