@@ -78,12 +78,91 @@
     margin:0;
     padding:0;
     background: none;
+    overflow: hidden;
     #footer-inner{
-        max-width:904px;
+        max-width:960px;
         background-color:@dark-grey;
-        margin: 40px auto 0;
-        padding:15px 20px;
-        border-radius:5px;
+        margin:0 auto;
+        overflow:hidden;
+        border-radius: 5px;
+        padding:20px;
+        .logo-cs-mini {
+            display: inline;
+            left: 50%;
+            margin-left: -11px;
+            position: absolute;
+            top: 18px;
+            background: url("@{base-url}/images/cs.png") no-repeat 0 0;
+            height: 23px;
+            width: 22px;
+            text-indent: -9999px;
+        }
+        .cs-address{
+            position:relative;
+            top:5px;
+            color: rgb(109, 109, 109);
+            font-size: 10px;
+            height: 19px;
+            line-height: 1;
+            width:200px;
+            float:right;
+        }
+        
+        .footer-right,.footer-left{
+            width:48.82117%;
+            overflow: hidden;
+            float: right;
+            padding:0;
+        }
+        .footer-left{
+            float: left;
+            ul{
+                list-style-type: disc;
+                color:@light-grey;
+                margin:0;
+                padding:0;
+                min-height:20px;
+                li{
+                    display: inline;
+                    margin-right:5px;
+                    a{
+                        font-size:13px;
+                        color: #6D6D6D;
+                        text-decoration: none;
+                        -webkit-transition: color 0.4s linear;
+                        -moz-transition: color 0.4s linear;
+                        -ms-transition: color 0.4s linear;
+                        -o-transition: color 0.4s linear;
+                        transition: color 0.4s linear;
+                        &:hover{color:white;}
+                    }
+                }
+            }
+        }
+        .footer-right .nav-social{
+            float: right;
+            margin:0;
+            padding:0;
+            min-width:110px;
+            li{
+                display: block;
+                float: left;
+                margin-right: 4%;
+                width: 12.3188%;
+                a{
+                    background: url("@{base-url}/images/btn-social.png") no-repeat 3px 3px;
+                    display: block;
+                    height: 20px;
+                    text-indent: -9999px;
+                    width: 20px;
+                    background-color: transparent;
+                    border: 0;
+                    color: transparent;
+                    font: 0/0 a;
+                    text-shadow: none;
+                }
+            }
+        }
     }
 }
 
@@ -93,6 +172,14 @@
 #pop-parent-for-bg{
     padding-bottom:85px;
 }
+
+.asset-title{
+    .font-smaller,i{
+        font-family:@asset-sub-title-default-font-family;
+        color:#8C8C8C;
+    }
+}
+
 #profile-background{
     display: none;
 }

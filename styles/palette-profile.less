@@ -22,6 +22,14 @@
 //pop-title
 @palette-pop-title-font-size:23px;
 
+.my-transition(){
+    -webkit-transition: color 0.4s linear;
+    -moz-transition: color 0.4s linear;
+    -ms-transition: color 0.4s linear;
+    -o-transition: color 0.4s linear;
+    transition: color 0.4s linear;
+}
+
 
 #header{
     position: absolute;
@@ -105,11 +113,7 @@
                         font-size:13px;
                         color: #6D6D6D;
                         text-decoration: none;
-                        -webkit-transition: color 0.4s linear;
-                        -moz-transition: color 0.4s linear;
-                        -ms-transition: color 0.4s linear;
-                        -o-transition: color 0.4s linear;
-                        transition: color 0.4s linear;
+                        .my-transition();
                         &:hover{color:white;}
                     }
                 }
@@ -136,16 +140,17 @@
                     color: transparent;
                     font: 0/0 a;
                     text-shadow: none;
+                    &:hover{background-position:3px -17px;}
                 }
             }
         }
     }
 }
 
-.facebook a{ background-position: -16px 3px!important;}
-.instagram a{background-position: -37px 3px!important;}
-.linkedin a{ background-position: -61px 3px!important;}
-.vimeo a{background-position: -82px 3px!important;}
+.facebook a{ background-position: -16px 3px!important; &:hover{background-position:-16px -17px!important;}}
+.instagram a{background-position: -37px 3px!important; &:hover{background-position:-37px -17px!important;}}
+.linkedin a{ background-position: -61px 3px!important; &:hover{background-position:-61px -17px!important;}}
+.vimeo a{background-position: -82px 3px!important; &:hover{background-position:-82px -17px!important;}}
 
 .columnizer-row-inner{
     background-color: white;
@@ -160,4 +165,10 @@
     max-width:1020px;
     height:382px;
     margin:0 auto; 
+}
+.asset-title{
+    .font-smaller,i{
+        font-family:@body-default-font-family;
+        color:#8C8C8C;
+    }
 }
