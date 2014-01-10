@@ -1,6 +1,7 @@
 @orange:#da6b11;
 @palette-color:@orange;
 @dark-grey:#333333;
+@pop-link-btn:rgba(218,218,218,0.65);
 //Text-styling for this particular page
 //body text-styling
 @palette-body-font-family: @body-default-font-family;
@@ -18,7 +19,20 @@
 @palette-headline-line-height:1.4;
 //pop-title
 @palette-pop-title-font-size:23px;
-
+.my-border-radius(){
+    border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    -o-border-radius: 5px 0 0 5px;
+    -ms-border-radius: 5px 0 0 5px;
+    -webkit-border-radius: 5px 0 0 5px;
+}
+.my-transition(){
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
 
 #header{
     position: relative;
@@ -45,6 +59,8 @@
             overflow: hidden;
             padding:0;
             #pop-title {
+                position:relative;
+                top:9px;
                 width: 716px;
                 display: block;
                 position: relative;
@@ -57,6 +73,11 @@
                   float: right!important;
                   margin-left:5px;
                   font-family:@body-default-font-family;
+                  background-color:@pop-link-btn !important;
+                  box-shadow: none!important;
+                  .my-border-radius();
+                  .my-transition();
+                  &:hover{background-color: darken(@pop-link-btn,10%)!important;}
                 }
             }
             #logo-parent-to-achieve-right-varticle-line{
@@ -129,11 +150,7 @@
                         font-size:13px;
                         color: #6D6D6D;
                         text-decoration: none;
-                        -webkit-transition: color 0.4s linear;
-                        -moz-transition: color 0.4s linear;
-                        -ms-transition: color 0.4s linear;
-                        -o-transition: color 0.4s linear;
-                        transition: color 0.4s linear;
+                        .my-transition();
                         &:hover{color:white;}
                     }
                 }
