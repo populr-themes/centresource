@@ -1,124 +1,82 @@
 @orange:#da6b11;
-@palette-color:@orange;
+@black:#000000;
 @dark-grey:#333333;
-@pop-link-btn:rgba(218,218,218,0.65);
+@light-grey:#676767;
+
+@palette-color:@orange;
 //Text-styling for this particular page
 //body text-styling
-@palette-body-font-family: @body-default-font-family;
-@palette-body-line-height: 1.71;
-@palette-body-font-size-1:14px;
-@palette-body-font-size-2:14px;
-@palette-body-font-size-3:14px;
+@palette-body-font-family: @body-profile-font-family;
+@palette-body-line-height: 1.94;
+@palette-body-font-size-1:19px;
+@palette-body-font-size-2:15px;
+@palette-body-font-size-3:15px;
 
 //headline text-styling
 //same font-family for both pages
 //sizes
-@palette-headline-font-size-1:41px;
-@palette-headline-font-size-2:24px;
+@palette-headline-font-size-1:43px;
+@palette-headline-font-size-2:23px;
 @palette-headline-font-size-3:19px;
 @palette-headline-line-height:1.4;
 //pop-title
 @palette-pop-title-font-size:23px;
-.my-border-radius(){
-    border-radius: 5px 0 0 5px;
-    -moz-border-radius: 5px 0 0 5px;
-    -o-border-radius: 5px 0 0 5px;
-    -ms-border-radius: 5px 0 0 5px;
-    -webkit-border-radius: 5px 0 0 5px;
-}
+
 .my-transition(){
-    -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -ms-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
-    transition: all 0.4s linear;
+    -webkit-transition: color 0.4s linear;
+    -moz-transition: color 0.4s linear;
+    -ms-transition: color 0.4s linear;
+    -o-transition: color 0.4s linear;
+    transition: color 0.4s linear;
 }
 
+
 #header{
-    position: relative;
+    position: absolute;
     overflow: hidden;
     width:100%;
-    padding:44px 0 25px 0;
+    padding:0;
+    z-index:1000;
     #horizontal-line{
-        display: block;
-        position: absolute;
-        height:2px;
-        width:100%;
-        margin:0;
-        padding:0;
-        background:#b1b1b1 url("@{base-url}/images/horizontal.png");
-        bottom:0;
+        display: none;
     }
     #header-inner{
         max-width:960px;
-        margin:0 auto;
-        overflow: hidden;
         padding:0;
+        margin:0 auto;
         #logo-title{
             width: auto;
             overflow: hidden;
             padding:0;
             #pop-title {
-                position:relative;
-                top:9px;
-                width: 716px;
-                display: block;
-                position: relative;
-                float: right;
-                padding: 0;
-                margin: 0;
-                .link-btn{
-                  position: relative;
-                  top: -5px;
-                  font-size:14px;
-                  text-shadow: none!important;
-                  font-weight: normal!important;
-                  display: block!important;
-                  float: right!important;
-                  margin-left:5px;
-                  font-family:@body-default-font-family;
-                  background-color:@pop-link-btn !important;
-                  box-shadow: none!important;
-                  .my-border-radius();
-                  .my-transition();
-                  color:black!important;
-                  font-size:14px!important;
-                  &:hover{background-color: darken(@pop-link-btn,10%)!important;}
-                }
+                display: none;
             }
             #logo-parent-to-achieve-right-varticle-line{
-                overflow: hidden;
-                padding: 12px 14px 12px 0;
-                margin: 0 14px 0 0;
-                background: url("@{base-url}/images/varticle.png") no-repeat top right;
-                background-repeat: repeat-y;
-                max-width: 216px;
-                float: left;
+                padding:30px;
+                background: none;
             }
-
         }
     }
 }
 
 #footer{
+    position: relative;
     width:100%;
-    margin:0;
+    margin:30px 0 0 0;
     padding:0;
-    background: none;
-    overflow: hidden;
+    background-color: @dark-grey;
+    background: url("@{base-url}/images/footer-bg.png") repeat 0 0;
+    overflow:hidden;
     #footer-inner{
         max-width:960px;
-        background-color:@dark-grey;
+        background-color: transparent;
         margin:0 auto;
-        overflow:hidden;
-        border-radius: 5px;
-        padding:20px;
         .logo-cs-mini {
             display: inline;
             left: 50%;
             margin-left: -11px;
             position: absolute;
-            top: 18px;
+            top: 25px;
             background: url("@{base-url}/images/cs.png") no-repeat 0 0;
             height: 23px;
             width: 22px;
@@ -139,7 +97,7 @@
             width:48.82117%;
             overflow: hidden;
             float: right;
-            padding:0;
+            padding:15px 0;
         }
         .footer-left{
             float: left;
@@ -148,7 +106,6 @@
                 color:@light-grey;
                 margin:0;
                 padding:0;
-                min-height:20px;
                 li{
                     display: inline;
                     margin-right:5px;
@@ -163,14 +120,14 @@
             }
         }
         .footer-right .nav-social{
-            float: right;
+            float:right;
             margin:0;
             padding:0;
             min-width:110px;
             li{
                 display: block;
                 float: left;
-                margin-right: 4%;
+                margin-right: 6.85151%;
                 width: 12.3188%;
                 a{
                     background: url("@{base-url}/images/btn-social.png") no-repeat 3px 3px;
@@ -183,26 +140,36 @@
                     color: transparent;
                     font: 0/0 a;
                     text-shadow: none;
+                    &:hover{background-position:3px -17px;}
                 }
             }
         }
     }
 }
 
+.facebook a{ background-position: -16px 3px!important; &:hover{background-position:-16px -17px!important;}}
+.instagram a{background-position: -37px 3px!important; &:hover{background-position:-37px -17px!important;}}
+.linkedin a{ background-position: -61px 3px!important; &:hover{background-position:-61px -17px!important;}}
+.vimeo a{background-position: -82px 3px!important; &:hover{background-position:-82px -17px!important;}}
+
 .columnizer-row-inner{
-    background-color: transparent;
+    background-color: white;
 }
+
 #pop-parent-for-bg{
-    padding-bottom:85px;
+    padding-bottom:0;
+}
+
+#profile-background{
+    display: block;
+    max-width:960px;
+    height:382px;
+    margin:0 auto; 
 }
 
 .asset-title{
     .font-size-smaller,i{
-        font-family:@asset-sub-title-default-font-family;
-        color:#8C8C8C;
+        font-family:'Myriad Pro',@closest-to-myriad-pro,@body-profile-font-family;
+        color:@custom-color;
     }
-}
-
-#profile-background{
-    display: none;
 }

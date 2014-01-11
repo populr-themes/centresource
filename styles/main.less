@@ -205,22 +205,22 @@
 
 .columnizer-row-contents-imagegroup:nth-child(odd),.columnizer-row-contents-embedgroup:nth-child(odd){
     .floated-parent-for-imagegroup-embedgroup-texts{
-        width:432px;
+        width:402px;
         float: right;
     }
     .columnizer-col1 .my-lightbox-parent,.columnizer-col1 .embed{
         float: left;
-        width:506px;
+        width:478px;
     }
 }
 .columnizer-row-contents-imagegroup:nth-child(even),.columnizer-row-contents-embedgroup:nth-child(even){
     .floated-parent-for-imagegroup-embedgroup-texts{
-        width:432px;
+        width:402px;
         float: left;
     }
     .columnizer-col1 .my-lightbox-parent,.columnizer-col1 .embed{
         float: right;
-        width:506px;
+        width:478px;
     }
 }
 
@@ -243,7 +243,7 @@
 //
 //embed
 
-.asset-type-embedgroup.asset-size-1 .embed { width:506px;height: 337px; }
+.asset-type-embedgroup.asset-size-1 .embed { width:478px;height: 337px; }
 .asset-type-embedgroup.asset-size-2 .embed { height: 226px; }
 .asset-type-embedgroup.asset-size-3 .embed { height: 226px; }
 
@@ -282,10 +282,33 @@
   #populr > .mobile-reset();
 
   // Edit the grid for mobile
-  .columnizer-row-inner, #pop-title { max-width: 640px; }
+  .columnizer-row-inner, #header-inner{ max-width: 640px; }
+  #logo-title{
+    width:100%!important;
+  }
+  #pop-title{
+    width:100%!important;
+    float: none!important;
+    position:static!important;
+    .link-btn{
+        float:none!important;
+        margin:0!important;
+        position:static!important;
+    }
+  }
+  #logo-parent-to-achieve-right-varticle-line{
+    background:none!important;
+    float:none!important;
+  }
   .columnizer-col { margin: 0 10px 20px !important; }
-
+  .cs-address {
+    display: none!important;
+  }
   // Edit the typography for mobile
+  #profile-background{
+    max-width:640px!important;
+    margin:0 auto!important;
+  }
   #pop-title { font-size: 40px !important; }
   .asset-title { font-size: 24px !important; }
   .description, .body, .description li, .body li { font-size: 14px !important; }
@@ -295,4 +318,21 @@
 @media screen and (max-width: 600px) {
   #pop-title { font-size: 32px !important; }
   .asset-title { font-size: 20px !important; }
+  .footer-left,.logo-cs-mini,.cs-address {
+    display: none!important;
+  }
+  .nav-social li{
+    margin-right: 5.85151%!important;
+    width: 13.3188%!important;
+    &:last-child{
+        margin-right:0!important;
+    }
+  }
+  .footer-right{
+    width:95%!important;
+    margin: auto!important;
+  }
+  .nav-social{
+        width:100%!important;
+  }
 }

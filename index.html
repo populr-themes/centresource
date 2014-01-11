@@ -24,7 +24,7 @@
   -->
   
   
-   <meta itemprop="defaultBackground" content="/images/profile-bg.png" data-width="1000" data-height="382" data-position="c" data-style="fill" data-color="#665b42">
+   <meta itemprop="defaultBackground" content="images/profile-bg.png" data-width="960" data-height="382" data-position="c" data-style="fill" data-color="#665b42">
    <meta itemprop="backgroundContainer" content="#profile-background">
 
   <!--
@@ -56,10 +56,10 @@
         <div id="horizontal-line"></div>
         <div id="header-inner">
             <div id="logo-title">
-                {{{title}}}
                 <div id="logo-parent-to-achieve-right-varticle-line">
                     {{logo max_width=216 max_height=100}}
                 </div>
+                {{{title}}}
             </div>
         </div>
     </div>
@@ -86,44 +86,50 @@
       {{/asset}}
 
       {{#asset "imagegroup" size="1"}}
-         <div class="my-lightbox-parent">
-              {{#if lightbox_enabled}}
-                  <div class="my-center">
-                        <span><i class="icon icon-plus"/></span>
-                  </div>
-              {{/if}}
-              {{{imageslider images width="506" height="337" crop_single = true}}}
-         </div>
-        
-        <div class="floated-parent-for-imagegroup-embedgroup-texts">
+         <div class="floated-parent-for-imagegroup-embedgroup-texts">
             {{{title}}}
             {{{description}}}
         </div>
+         {{#if lightbox_enabled}}
+            <div class="my-lightbox-parent">
+                <div class="my-center">
+                    <span><i class="icon icon-plus"/></span>
+                </div>
+                {{{imageslider images width="478" height="337" crop_single = true}}}
+            </div>
+         {{else}}
+                {{{imageslider images width="478" height="337" crop_single = true}}}
+         {{/if}}
+        
       {{/asset}}
  
       {{#asset "imagegroup" size="2"}}
-        <div class="my-lightbox-parent">
-              {{#if lightbox_enabled}}
-                  <div class="my-center">
-                        <span><i class="icon icon-plus"/></span>
-                  </div>
-              {{/if}}
-              {{{imageslider images width="442" height="226" crop_single = true}}}
-         </div>
+        {{#if lightbox_enabled}}
+            <div class="my-lightbox-parent">
+                <div class="my-center">
+                    <span><i class="icon icon-plus"/></span>
+                </div>
+                {{{imageslider images width="412" height="226" crop_single = true}}}
+            </div>
+         {{else}}
+                {{{imageslider images width="412" height="226" crop_single = true}}}
+         {{/if}}
         
         {{{title}}}
         {{{description}}}
       {{/asset}}
   
       {{#asset "imagegroup" size="3"}}
-        <div class="my-lightbox-parent">
-              {{#if lightbox_enabled}}
-                  <div class="my-center">
-                        <span><i class="icon icon-plus"/></span>
-                  </div>
-              {{/if}}
-              {{{imageslider images width="275" height="226" crop_single = true}}}
-         </div>
+        {{#if lightbox_enabled}}
+            <div class="my-lightbox-parent">
+                <div class="my-center">
+                    <span><i class="icon icon-plus"/></span>
+                </div>
+                {{{imageslider images width="260" height="226" crop_single = true}}}
+            </div>
+         {{else}}
+                {{{imageslider images width="260" height="226" crop_single = true}}}
+         {{/if}}
         {{{title}}}
         {{{description}}}
       {{/asset}}
@@ -161,7 +167,7 @@
         </ul>
       {{/asset}}
  
-      {{#asset "embedgroup" size="1" width="506"}}
+      {{#asset "embedgroup" size="1" width="478"}}
         <div class="floated-parent-for-imagegroup-embedgroup-texts">
             {{{title}}}
             {{{description}}}
@@ -172,7 +178,7 @@
         
       {{/asset}}
 
-      {{#asset "embedgroup" size="2" width="442"}}
+      {{#asset "embedgroup" size="2" width="412"}}
         {{#embeds}}
           <div class="embed">{{{html}}}</div>
         {{/embeds}}
@@ -180,7 +186,7 @@
         {{{description}}}
       {{/asset}}
 
-      {{#asset "embedgroup" size="3" width="275"}}
+      {{#asset "embedgroup" size="3" width="260"}}
         {{#embeds}}
           <div class="embed">{{{html}}}</div>
         {{/embeds}}
