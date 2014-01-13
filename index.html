@@ -86,11 +86,8 @@
       {{/asset}}
 
       {{#asset "imagegroup" size="1"}}
-         <div class="floated-parent-for-imagegroup-embedgroup-texts">
-            {{{title}}}
-            {{{description}}}
-        </div>
-         {{#if lightbox_enabled}}
+         
+        {{#if lightbox_enabled}}
             <div class="my-lightbox-parent">
                 <div class="my-center">
                     <span><i class="icon icon-plus"/></span>
@@ -100,6 +97,10 @@
          {{else}}
                 {{{imageslider images width="468" height="337" crop_single = true}}}
          {{/if}}
+         <div class="floated-parent-for-imagegroup-embedgroup-texts">
+            {{{title}}}
+            {{{description}}}
+        </div>
         
       {{/asset}}
  

@@ -292,6 +292,7 @@
   .columnizer-row-inner,{ max-width: 640px!important;}
     #header-inner{
         max-width: 620px!important;
+        padding:0 10px!important;
     }
   #logo-title{
     width:100%!important;
@@ -328,9 +329,15 @@
   .asset-title { font-size: 24px !important; }
   .description, .body, .description li, .body li { font-size: 14px !important; }
   .asset-title, .description, .body, .description li, .body li { text-align: left !important; }
+  
+  .floated-parent-for-imagegroup-embedgroup-texts,.columnizer-col1 .my-lightbox-parent,.columnizer-col1 .embed,.columnizer-col1 .populr-image-slider{
+        width:auto!important;
+        float:none!important;
+  }
 }
 
 @media screen and (max-width: 600px) {
+ 
   #pop-title { font-size: 24px !important; }
   .asset-title { font-size: 20px !important; }
   .footer-left,.logo-cs-mini,.cs-address {
