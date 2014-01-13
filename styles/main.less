@@ -61,6 +61,22 @@
   font-size: @font-size;
   line-height: @body-line-height;
 }
+.my-opacity(@opacity:1){
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{opacity})";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=@opacity);
+
+  /* Netscape */
+  -moz-opacity: @opacity;
+
+  /* Safari 1.x */
+  -khtml-opacity: @opacity;
+
+  /* Good browsers */
+  opacity: @opacity;
+}
 
 #pop {
   font-family: @body-font-family;
@@ -178,7 +194,7 @@
             padding:20px;
             height:20px;
             width:20px;
-            opacity:0;
+            .my-opacity(0);
             display: inline-block;
             border-radius:100%;
             -moz-border-radius:100%;
@@ -198,8 +214,8 @@
             }
         }
     }
-    &:hover .populr-image-slider{opacity:.5}
-    &:hover span{opacity: 1}
+    &:hover .populr-image-slider{.my-opacity(0.5)}
+    &:hover span{.my-opacity(0.5)}
 }
 #populr > #image-slider-themes > .basic();
 
