@@ -13,6 +13,7 @@
 //headline text-styling
 //same font-family for both pages
 //sizes
+
 @palette-headline-font-size-1:41px;
 @palette-headline-font-size-2:24px;
 @palette-headline-font-size-3:19px;
@@ -208,4 +209,18 @@
 
 #profile-background{
     display: none;
+}
+
+.asset-title .font-size-smaller,.asset-title i{
+    font-family:@asset-sub-title-default-font-family;
+    color:#8C8C8C;
+    .asset-size-1 &{
+        font-size:20px;
+    }
+    .asset-size-2 &{
+        font-size:14px;
+    }
+    .asset-size-3 &{
+        font-size:14px;
+    }
 }
