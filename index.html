@@ -167,13 +167,14 @@
       {{/asset}}
  
       {{#asset "embedgroup" size="1" width="468"}}
+        
+        {{#embeds}}
+          <div class="embed">{{{html}}}</div>
+        {{/embeds}}
         <div class="floated-parent-for-imagegroup-embedgroup-texts">
             {{{title}}}
             {{{description}}}
         </div>
-        {{#embeds}}
-          <div class="embed">{{{html}}}</div>
-        {{/embeds}}
         
       {{/asset}}
 
