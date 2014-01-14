@@ -336,6 +336,7 @@ h1, h2, h3, h4, h5, h6 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
         top:0!important;
     }
   }
+
   .asset-type-documentgroup .asset-title,.asset-type-text .asset-title {
     .columnizer-col &{
         margin-top: 0!important;
@@ -346,15 +347,12 @@ h1, h2, h3, h4, h5, h6 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
     background:none!important;
     float:none!important;
   }
-  .columnizer-col { margin: 0 10px 20px !important; }
-  .columnizer-row:first-child{
-        .columnizer-col:first-child{
-            margin-top:20px!important;
-        }
-   }
+  .columnizer-col { margin: 20px 10px!important; }
+  
   .cs-address {
     display: none!important;
   }
+  .columnizer-col:last-child{margin-bottom:0!important;}
   // Edit the typography for mobile
   #profile-background{
     max-width:640px!important;
