@@ -257,13 +257,24 @@ h1, h2, h3, h4, h5, h6 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
     }
   }
 }
+
 //margin-padding
+
+.columnizer-row:first-child{
+    .columnizer-col{
+        margin-top:40px;
+    }
+}
+.columnizer-row:last-child{
+    .columnizer-col{
+        margin-bottom:0;
+    }
+}
 .asset-type-documentgroup .asset-title,.asset-type-text .asset-title {
     .columnizer-col &{
         margin-top: -20px;
     }
 }
-
 
 //embed
 
@@ -329,12 +340,18 @@ h1, h2, h3, h4, h5, h6 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
     .columnizer-col &{
         margin-top: 0!important;
     }
-}
+ }
+  
   #pop-logo{
     background:none!important;
     float:none!important;
   }
   .columnizer-col { margin: 0 10px 20px !important; }
+  .columnizer-row:first-child{
+        .columnizer-col:first-child{
+            margin-top:20px!important;
+        }
+   }
   .cs-address {
     display: none!important;
   }
