@@ -24,7 +24,7 @@
 // @custom-color is defined in variables.less
 @link-color: @custom-color;
 @pop-bg-color:#ECECEC;
-@orange:#da6b11;
+@orange:#c26c23;
 @dark-grey:#333333;
 
 //Variables pulled from default.less & profile.less
@@ -347,7 +347,7 @@ h1, h2, h3, h4, h5, h6 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
     background:none!important;
     float:none!important;
   }
-  .columnizer-col { margin: 30px 10px!important; }
+  .columnizer-col { margin: 32px 10px!important; }
   
   .cs-address {
     display: none!important;
@@ -371,11 +371,15 @@ h1, h2, h3, h4, h5, h6 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
 
 @media screen and (max-width: 600px) {
  
-  #pop-title { font-size: 24px !important; }
-  .asset-title { font-size: 20px !important; }
+  #pop-title { font-size: 24px !important; text-align:center!important; }
+  .link-btn{float:none!important;margin:10px 0!important;}
+  .asset-title { font-size: 20px !important }
   .footer-left,.logo-cs-mini,.cs-address {
     display: none!important;
   }
+   #pop-logo{
+        margin:0 auto!important;
+   }
   .nav-social li{
     margin-right: 5.85151%!important;
     width: 13.3188%!important;
