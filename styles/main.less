@@ -220,7 +220,7 @@ h1, h2, h3, h4, h5, h6 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
 }
 #populr > #image-slider-themes > .basic();
 
-.columnizer-row-contents-imagegroup:nth-child(odd),.columnizer-row-contents-embedgroup:nth-child(odd){
+.columnizer-row-contents-imagegroup,.columnizer-row-contents-embedgroup{
     .floated-parent-for-imagegroup-embedgroup-texts{
         width:392px;
         float: right;
@@ -230,16 +230,7 @@ h1, h2, h3, h4, h5, h6 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
         width:468px;
     }
 }
-.columnizer-row-contents-imagegroup:nth-child(even),.columnizer-row-contents-embedgroup:nth-child(even){
-    .floated-parent-for-imagegroup-embedgroup-texts{
-        width:392px;
-        float: left;
-    }
-    .columnizer-col1 .my-lightbox-parent,.columnizer-col1 .embed,.columnizer-col1 .populr-image-slider{
-        float: right;
-        width:468px;
-    }
-}
+
 
 
 // Document asset styling
@@ -390,12 +381,9 @@ h1, h2, h3, h4, h5, h6 { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
     margin-right: 5.85151%!important;
     width: 13.3188%!important;
     a{margin:auto!important;}
-    &:last-child{
-        margin-right:0!important;
-    }
   }
   .footer-right{
-    width:95%!important;
+    width:100%!important;
     margin: auto!important;
   }
   .nav-social{
