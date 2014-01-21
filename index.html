@@ -24,7 +24,7 @@
   -->
   
   
-   <meta itemprop="defaultBackground" content="/images/profile-bg.png" data-width="808" data-height="380" data-position="c" data-style="fill" data-color="#665b42">
+   <meta itemprop="defaultBackground" content="/images/profile.png" data-width="808" data-height="380" data-position="c" data-style="fill" data-color="#665b42">
    <meta itemprop="backgroundContainer" content="#profile-background">
 
   <!--
@@ -32,8 +32,8 @@
     The Custom style presents Populr's end users with a color picker that sets the @custom-color variable
   -->
   <meta itemprop="palette" content="palette-default" title="Default" data-preview="#da6b11">
-  <meta itemprop="palette" content="palette-profile" title="Profile" data-preview="#ffffff">
-  <meta itemprop="palette" content="palette-custom" data-preview="custom">
+  <meta itemprop="palette" content="palette-profile" title="Profile" data-preview="#333333">
+
  
   <!-- Add any styles your theme requires here -->
   <link rel="stylesheet/less" type="text/css" href="/styles/main.less">
@@ -52,18 +52,30 @@
        prevent issues with quote escaping and invalid markup. -->
 <script id="theme" type="text/x-handlebars-template">
 <div id="pop-parent-for-bg">
-    
-    <div id="header">
+
+    {{#if_equal pop.palette "palette-default"}}
+      <div id="header">
+          <div id="header-inner">
+              <div id="logo-title" class="clearfix">
+                <div id="fixed-logo">{{logo max_width=216 max_height=100}}</div>
+                {{{title}}}
+              </div>
+          </div>
+      </div>
+    {{/if_equal}}
+
+    {{#if_equal pop.palette "palette-profile"}}
+    <div id="profile-background">
+      <div id="header">
         <div id="header-inner">
-            <div id="logo-title">
-              {{logo max_width=216 max_height=100}}
+            <div id="logo-title" class="clearfix">
+              <div id="fixed-logo2">{{logo max_width=216 max_height=100}}</div>
               {{{title}}}
             </div>
         </div>
+     </div>
     </div>
-    <div id="profile-background"> 
-
-    </div>
+    {{/if_equal}}
     <div id="shadow">
         {{#region "columnizer" id="main-region" max_cols="3" max_auto_assets="0" dummy_content="T-1|T-1,T-1|T-1,T-1,T-1|I-1|I-2|I-1,I-2|I-1,I-2,I-3|V-1|V-2|V-1,V-2|V-1,V-2,V-3|D-1|D-3|D-1,D-3|D-1,D-2,D-3|E-1|E-2|E-1,E-2|E-1,E-2,E-3"}}
           {{#asset "text" size="1"}}

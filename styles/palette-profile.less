@@ -34,10 +34,20 @@
     border-top:none;
 }
 
+#main-region { padding-top: 0px !important; }
+
+#fixed-logo2 {
+  background: url("@{base-url}/images/logo-white.png") no-repeat;
+  height: 40px;
+  width: 216px;
+  float: left;
+  border-right: none !important;
+  margin: 30px;
+}
+
 #header{
-    position: absolute;
-    overflow: hidden;
-    width:100%;
+    width:960px;
+    margin: 0 auto;
     padding:0;
     z-index:1000;
     border-bottom: none;
@@ -170,7 +180,7 @@
 #pop-parent-for-bg{
     padding-bottom:0;
 }
-
+#header-top { display: none; }
 #profile-background{
     display: block;
     width:960px;
@@ -183,6 +193,7 @@
         font-family:'Myriad pro',@closest-to-myriad-pro,@body-profile-font-family;
         color:@palette-color;
         font-size:18px;
+        text-shadow: none !important;
     }
 }
 

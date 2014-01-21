@@ -1,6 +1,6 @@
 @orange:#e26901;
 @palette-color:@orange;
-@dark-grey:#333333;
+@dark-grey:#7e6161;
 @border-grey:#d6d6d6;
 @border-white:#ffffff;
 @pop-link-btn:rgba(218,218,218,0.65);
@@ -36,8 +36,18 @@
     -o-transition: all 0.4s linear;
     transition: all 0.4s linear;
 }
-.columnizer-row:first-child{
+#main-region {
     border-top:1px solid @border-white;
+}
+
+#fixed-logo {
+  background: url("@{base-url}/images/logo.png") no-repeat;
+  height: 40px;
+  width: 216px;
+  float: left;
+  border-right: 1px solid #A5A5A5 !important;
+  padding-right: 10px;
+  margin: 0;
 }
 #header{
     position: relative;
@@ -61,8 +71,9 @@
                 width: 656px;
                 display: block;
                 position: relative;
-                float: right;
-                padding:9px 0 0 0;
+                float: left;
+                padding: 0px 0 0 10px;
+                border-left: 1px solid white;
                 margin: 0;
                 .link-btn{
                   position: relative;
@@ -106,7 +117,7 @@
     margin-top:60px;
     #footer-inner{
         max-width:860px;
-        background-color:@dark-grey;
+        background-color:@dark-grey !important;
         margin:0 auto;
         overflow:hidden;
         border-radius: 5px;
@@ -201,15 +212,15 @@
 }
 
 #pop-parent-for-bg{
-    padding-bottom:85px;
+    padding-bottom:65px;
 }
 
-.asset-title{
-    .font-size-smaller,i{
-        font-family:@asset-sub-title-default-font-family;
-        color:#8C8C8C;
-    }
-}
+// .asset-title{
+//     .font-size-smaller,i{
+//         font-family:@asset-sub-title-default-font-family;
+//         color:#8C8C8C;
+//     }
+// }
 
 #profile-background{
     display: none;
@@ -218,11 +229,12 @@
 .asset-title .font-size-smaller,.asset-title i{
     font-family:@asset-sub-title-default-font-family;
     color:#8C8C8C;
+    text-shadow: none;
     .asset-size-1 &{
         font-size:20px;
     }
     .asset-size-2 &{
-        font-size:14px;
+        font-size:16px;
     }
     .asset-size-3 &{
         font-size:14px;
