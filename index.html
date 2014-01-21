@@ -24,7 +24,7 @@
   -->
   
   
-   <meta itemprop="defaultBackground" content="/images/profile-bg.png" data-width="960" data-height="382" data-position="c" data-style="fill" data-color="#665b42">
+   <meta itemprop="defaultBackground" content="images/profile-bg.png" data-width="810" data-height="382" data-position="c" data-style="fill" data-color="#665b42">
    <meta itemprop="backgroundContainer" content="#profile-background">
 
   <!--
@@ -32,7 +32,7 @@
     The Custom style presents Populr's end users with a color picker that sets the @custom-color variable
   -->
   <meta itemprop="palette" content="palette-default" title="Default" data-preview="#da6b11">
-  <meta itemprop="palette" content="palette-profile" title="Profile" data-preview="#bcf266">
+  <meta itemprop="palette" content="palette-profile" title="Profile" data-preview="#ffffff">
  
   <!-- Add any styles your theme requires here -->
   <link rel="stylesheet/less" type="text/css" href="styles/main.less">
@@ -60,140 +60,141 @@
             </div>
         </div>
     </div>
+    <div id="shadow">
+        <div id="profile-background"> 
 
-    <div id="profile-background">
-        
+        </div>
+
+
+        {{#region "columnizer" id="main-region" max_cols="3" max_auto_assets="0" dummy_content="T-1|T-1,T-1|T-1,T-1,T-1|I-1|I-2|I-1,I-2|I-1,I-2,I-3|V-1|V-2|V-1,V-2|V-1,V-2,V-3|D-1|D-3|D-1,D-3|D-1,D-2,D-3|E-1|E-2|E-1,E-2|E-1,E-2,E-3"}}
+          {{#asset "text" size="1"}}
+            {{{title}}}
+            {{{body}}}
+          {{/asset}}
+
+          {{#asset "text" size="2"}}
+            {{{title}}}
+            {{{body}}}
+          {{/asset}}
+
+          {{#asset "text" size="3"}}
+            {{{title}}}
+            {{{body}}}
+          {{/asset}}
+
+          {{#asset "imagegroup" size="1"}}
+
+            {{#if lightbox_enabled}}
+                <div class="my-lightbox-parent clearfix">
+                    <div class="my-center">
+                        <span><i class="icon icon-plus"/></span>
+                    </div>
+                    {{{imageslider images width="468" height="337" crop_single = true}}}
+                </div>
+             {{else}}
+                    {{{imageslider images width="468" height="337" crop_single = true}}}
+             {{/if}}
+             <div class="floated-parent-for-imagegroup-embedgroup-texts clearfix">
+                {{{title}}}
+                {{{description}}}
+            </div>
+
+          {{/asset}}
+
+          {{#asset "imagegroup" size="2"}}
+            {{#if lightbox_enabled}}
+                <div class="my-lightbox-parent">
+                    <div class="my-center">
+                        <span><i class="icon icon-plus"/></span>
+                    </div>
+                    {{{imageslider images width="412" height="226" crop_single = true}}}
+                </div>
+             {{else}}
+                    {{{imageslider images width="412" height="226" crop_single = true}}}
+             {{/if}}
+
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+
+          {{#asset "imagegroup" size="3"}}
+            {{#if lightbox_enabled}}
+                <div class="my-lightbox-parent">
+                    <div class="my-center">
+                        <span><i class="icon icon-plus"/></span>
+                    </div>
+                    {{{imageslider images width="260" height="226" crop_single = true}}}
+                </div>
+             {{else}}
+                    {{{imageslider images width="260" height="226" crop_single = true}}}
+             {{/if}}
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+
+          {{#asset "documentgroup" size="1"}}
+            {{{title}}}
+            {{{description}}}
+            <ul class="documents">
+              {{#documents}}
+                {{!--  The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
+                <li><a href="{{original_url}}"><i class="icon icon-download" /> {{title}}</a></li>
+              {{/documents}}
+            </ul>
+          {{/asset}}
+
+          {{#asset "documentgroup" size="2"}}
+            {{{title}}}
+            {{{description}}}
+            <ul class="documents">
+              {{#documents}}
+                {{!--  The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
+                <li><a href="{{original_url}}"><i class="icon icon-download" /> {{title}}</a></li>
+              {{/documents}}
+            </ul>
+          {{/asset}}
+
+          {{#asset "documentgroup" size="3"}}
+            {{{title}}}
+            {{{description}}}
+            <ul class="documents">
+              {{#documents}}
+                {{!--  The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
+                <li><a href="{{original_url}}"><i class="icon icon-download" /> {{title}}</a></li>
+              {{/documents}}
+            </ul>
+          {{/asset}}
+
+          {{#asset "embedgroup" size="1" width="468"}}
+
+            {{#embeds}}
+              <div class="embed clearfix">{{{html}}}</div>
+            {{/embeds}}
+            <div class="floated-parent-for-imagegroup-embedgroup-texts clearfix">
+                {{{title}}}
+                {{{description}}}
+            </div>
+
+          {{/asset}}
+
+          {{#asset "embedgroup" size="2" width="412"}}
+            {{#embeds}}
+              <div class="embed">{{{html}}}</div>
+            {{/embeds}}
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+
+          {{#asset "embedgroup" size="3" width="260"}}
+            {{#embeds}}
+              <div class="embed">{{{html}}}</div>
+            {{/embeds}}
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+
+        {{/region}}
     </div>
-
-
-    {{#region "columnizer" id="main-region" max_cols="3" max_auto_assets="0" dummy_content="T-1|T-1,T-1|T-1,T-1,T-1|I-1|I-2|I-1,I-2|I-1,I-2,I-3|V-1|V-2|V-1,V-2|V-1,V-2,V-3|D-1|D-3|D-1,D-3|D-1,D-2,D-3|E-1|E-2|E-1,E-2|E-1,E-2,E-3"}}
-      {{#asset "text" size="1"}}
-        {{{title}}}
-        {{{body}}}
-      {{/asset}}
-
-      {{#asset "text" size="2"}}
-        {{{title}}}
-        {{{body}}}
-      {{/asset}}
-
-      {{#asset "text" size="3"}}
-        {{{title}}}
-        {{{body}}}
-      {{/asset}}
-
-      {{#asset "imagegroup" size="1"}}
-         
-        {{#if lightbox_enabled}}
-            <div class="my-lightbox-parent">
-                <div class="my-center">
-                    <span><i class="icon icon-plus"/></span>
-                </div>
-                {{{imageslider images width="468" height="337" crop_single = true}}}
-            </div>
-         {{else}}
-                {{{imageslider images width="468" height="337" crop_single = true}}}
-         {{/if}}
-         <div class="floated-parent-for-imagegroup-embedgroup-texts">
-            {{{title}}}
-            {{{description}}}
-        </div>
-        
-      {{/asset}}
- 
-      {{#asset "imagegroup" size="2"}}
-        {{#if lightbox_enabled}}
-            <div class="my-lightbox-parent">
-                <div class="my-center">
-                    <span><i class="icon icon-plus"/></span>
-                </div>
-                {{{imageslider images width="412" height="226" crop_single = true}}}
-            </div>
-         {{else}}
-                {{{imageslider images width="412" height="226" crop_single = true}}}
-         {{/if}}
-        
-        {{{title}}}
-        {{{description}}}
-      {{/asset}}
-  
-      {{#asset "imagegroup" size="3"}}
-        {{#if lightbox_enabled}}
-            <div class="my-lightbox-parent">
-                <div class="my-center">
-                    <span><i class="icon icon-plus"/></span>
-                </div>
-                {{{imageslider images width="260" height="226" crop_single = true}}}
-            </div>
-         {{else}}
-                {{{imageslider images width="260" height="226" crop_single = true}}}
-         {{/if}}
-        {{{title}}}
-        {{{description}}}
-      {{/asset}}
-  
-      {{#asset "documentgroup" size="1"}}
-        {{{title}}}
-        {{{description}}}
-        <ul class="documents">
-          {{#documents}}
-            {{!--  The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-            <li><a href="{{original_url}}"><i class="icon icon-download" /> {{title}}</a></li>
-          {{/documents}}
-        </ul>
-      {{/asset}}
- 
-      {{#asset "documentgroup" size="2"}}
-        {{{title}}}
-        {{{description}}}
-        <ul class="documents">
-          {{#documents}}
-            {{!--  The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-            <li><a href="{{original_url}}"><i class="icon icon-download" /> {{title}}</a></li>
-          {{/documents}}
-        </ul>
-      {{/asset}}
- 
-      {{#asset "documentgroup" size="3"}}
-        {{{title}}}
-        {{{description}}}
-        <ul class="documents">
-          {{#documents}}
-            {{!--  The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-            <li><a href="{{original_url}}"><i class="icon icon-download" /> {{title}}</a></li>
-          {{/documents}}
-        </ul>
-      {{/asset}}
- 
-      {{#asset "embedgroup" size="1" width="468"}}
-        
-        {{#embeds}}
-          <div class="embed">{{{html}}}</div>
-        {{/embeds}}
-        <div class="floated-parent-for-imagegroup-embedgroup-texts">
-            {{{title}}}
-            {{{description}}}
-        </div>
-        
-      {{/asset}}
-
-      {{#asset "embedgroup" size="2" width="412"}}
-        {{#embeds}}
-          <div class="embed">{{{html}}}</div>
-        {{/embeds}}
-        {{{title}}}
-        {{{description}}}
-      {{/asset}}
-
-      {{#asset "embedgroup" size="3" width="260"}}
-        {{#embeds}}
-          <div class="embed">{{{html}}}</div>
-        {{/embeds}}
-        {{{title}}}
-        {{{description}}}
-      {{/asset}}
-
-    {{/region}}
     <div id="footer">
         <div id="footer-inner">
             <div class="footer-left">
