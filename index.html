@@ -85,7 +85,7 @@
           {{#asset "imagegroup" size="1"}}
 
             {{#if lightbox_enabled}}
-                <div class="my-lightbox-parent clearfix">
+                <div class="my-lightbox-parent">
                     <div class="my-center">
                         <span><i class="icon icon-plus"/></span>
                     </div>
@@ -94,7 +94,7 @@
              {{else}}
                     {{{imageslider images width="468" height="337" crop_single = true}}}
              {{/if}}
-             <div class="floated-parent-for-imagegroup-embedgroup-texts clearfix">
+             <div class="floated-parent-for-imagegroup-embedgroup-texts">
                 {{{title}}}
                 {{{description}}}
             </div>
@@ -168,9 +168,9 @@
           {{#asset "embedgroup" size="1" width="468"}}
 
             {{#embeds}}
-              <div class="embed clearfix">{{{html}}}</div>
+              <div class="embed">{{{html}}}</div>
             {{/embeds}}
-            <div class="floated-parent-for-imagegroup-embedgroup-texts clearfix">
+            <div class="floated-parent-for-imagegroup-embedgroup-texts">
                 {{{title}}}
                 {{{description}}}
             </div>
