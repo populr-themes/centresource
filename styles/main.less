@@ -374,9 +374,14 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  
+  #profile-background{
+    max-width:100%!important;
+  }
   #pop-title { 
-    font-size: 24px !important; text-align:center!important; 
+    font-size: 24px !important;
+    text-align:center!important;
+    width: 90% !important;
+    margin-top: 20px !important;
   }
     #header #header-inner #logo-title #pop-title .link-btn{
         float:none!important;margin:10px 28%!important;
@@ -384,7 +389,11 @@ body {
     }
     #header { padding: 0px; }
     #header-inner{ width: 100% !important; margin: 32px 10px!important; }
-    #fixed-logo { border-right: none !important; }
+    #fixed-logo {
+      border-right: none !important;
+      position: relative;
+      margin: 0 14%;
+    }
   
   .asset-title { font-size: 20px !important }
   .footer-left,.logo-cs-mini,.cs-address {
