@@ -95,20 +95,37 @@
 
           {{#asset "imagegroup" size="1"}}
 
-            {{#if lightbox_enabled}}
-                <div class="my-lightbox-parent">
-                    <div class="my-center">
-                        <span><i class="icon icon-plus"/></span>
+              {{#if_or title_visible description_visible}}
+                {{#if lightbox_enabled}}
+                    <div class="my-lightbox-parent">
+                        <div class="my-center">
+                            <span><i class="icon icon-plus"/></span>
+                        </div>
+                        {{{imageslider images width="468" height="337" crop_single = true}}}
                     </div>
-                    {{{imageslider images width="468" height="337" crop_single = true}}}
+                 {{else}}
+                        {{{imageslider images width="468" height="337" crop_single = true}}}
+                 {{/if}}
+                 <div class="floated-parent-for-imagegroup-embedgroup-texts">
+                    {{{title}}}
+                    {{{description}}}
                 </div>
-             {{else}}
-                    {{{imageslider images width="468" height="337" crop_single = true}}}
-             {{/if}}
-             <div class="floated-parent-for-imagegroup-embedgroup-texts">
-                {{{title}}}
-                {{{description}}}
-            </div>
+              {{else}}
+                {{#if lightbox_enabled}}
+                    <div class="my-lightbox-parent">
+                        <div class="my-center">
+                            <span><i class="icon icon-plus"/></span>
+                        </div>
+                        {{{imageslider images width="936" height="337" crop_single = true}}}
+                    </div>
+                 {{else}}
+                        {{{imageslider images width="936" height="337" crop_single = true}}}
+                 {{/if}}
+                 <div class="floated-parent-for-imagegroup-embedgroup-texts">
+                    {{{title}}}
+                    {{{description}}}
+                </div>
+              {{/if_or}}
 
           {{/asset}}
 
